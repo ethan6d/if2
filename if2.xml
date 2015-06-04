@@ -27,6 +27,27 @@
         <statement name="DO0">
           <block type="movement_right" id="265"></block>
         </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="528" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="sensor_object" id="529">
+                <field name="OBJECT">RIGHTFRONT</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="530">
+                <field name="NUM">75</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="movement_left" id="540"></block>
+        </statement>
+        <statement name="ELSE">
+          <block type="movement_forward" id="275"></block>
+        </statement>
         <next>
           <block type="robot_delay" id="453" inline="true">
             <value name="DELAY">
@@ -42,5 +63,4 @@
       <block type="movement_stop" id="509"></block>
     </next>
   </block>
-  <block type="movement_forward" id="275" x="161" y="151"></block>
 </xml>
